@@ -1,0 +1,41 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "DistanceIntent",
+      "samples": [
+        "{from} und {to}",
+        "{from} nach {to}",
+        "von {from} nach {to}",
+        "zwischen {from} und {to}",
+        "nach der Distanz von {from} nach {to}",
+        "nach der Entfernung von {from} nach {to}",
+        "nach der Distanz zwischen {from} und {to}",
+        "nach der Entfernung zwischen {from} und {to}"
+      ],
+      "slots": [
+        {
+          "name": "from",
+          "type": "AMAZON.DE_CITY",
+          "samples": []
+        },
+        {
+          "name": "to",
+          "type": "AMAZON.DE_CITY",
+          "samples": []
+        }
+      ]
+    }
+  ]
+}
