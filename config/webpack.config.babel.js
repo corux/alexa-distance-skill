@@ -24,6 +24,9 @@ export default {
     ]
   },
   plugins: [
-    new BabiliPlugin()
+    new BabiliPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.GOOGLE_API_KEY': JSON.stringify(process.env.GOOGLE_API_KEY)
+    }),
   ]
 };
