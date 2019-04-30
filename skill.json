@@ -1,0 +1,46 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "dist",
+          "uri": "arn:aws:lambda:eu-west-1:347839150037:function:alexa-distance-skill-production"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    },
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "name": "Entfernungsrechner",
+          "smallIconUri": "https://s3-eu-west-1.amazonaws.com/alexa-distance-skill/icon108.png",
+          "largeIconUri": "https://s3-eu-west-1.amazonaws.com/alexa-distance-skill/icon512.png",
+          "summary": "Berechne Entfernungen zwischen Orten.",
+          "description": "Dieser Skill erlaubt das Abfragen von Distanzen zwischen Städten. Als Basis für die Entfernung wird die Auto-Strecke verwendet. Zusätzlich wird die aktuell benötigte Zeit mit ausgegeben.",
+          "examplePhrases": [
+            "Alexa, frage Entfernungsrechner nach der Distanz von München nach Hamburg",
+            "Alexa, öffne Entfernungsrechner",
+            "Entfernung zwischen München und Hamburg"
+          ],
+          "keywords": [
+            "distanz",
+            "entfernung",
+            "km",
+            "kilometer"
+          ]
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "No changes done, only metadata was updated.",
+      "category": "NAVIGATION_AND_TRIP_PLANNER",
+      "distributionCountries": []
+    }
+  }
+}

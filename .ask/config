@@ -1,0 +1,33 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.d90313f1-5c48-4117-acdb-f7cdd77f022a",
+      "was_cloned": false,
+      "merge": {},
+      "resources": {
+        "manifest": {
+          "eTag": "319b787d328d5b581d972381d67ecb22"
+        },
+        "interactionModel": {
+          "de-DE": {
+            "eTag": "0831bb83159aa907b8da680da2e1fd72"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:eu-west-1:347839150037:function:alexa-distance-skill-production",
+            "awsRegion": "eu-west-1",
+            "codeUri": "dist",
+            "functionName": "alexa-distance-skill-production",
+            "handler": "index.handler",
+            "revisionId": "13a0d53b-e727-46f0-9458-7ef736c08258",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
+    }
+  }
+}

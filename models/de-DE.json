@@ -1,0 +1,48 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "entfernungs rechner",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "DistanceIntent",
+          "slots": [
+            {
+              "name": "from",
+              "type": "AMAZON.City",
+              "samples": []
+            },
+            {
+              "name": "to",
+              "type": "AMAZON.City",
+              "samples": []
+            }
+          ],
+          "samples": [
+            "{from} und {to}",
+            "{from} nach {to}",
+            "von {from} nach {to}",
+            "zwischen {from} und {to}",
+            "Distanz zwischen {from} und {to}",
+            "Entfernung zwischen {from} und {to}",
+            "nach der Distanz von {from} nach {to}",
+            "nach der Entfernung von {from} nach {to}",
+            "nach der Distanz zwischen {from} und {to}",
+            "nach der Entfernung zwischen {from} und {to}"
+          ]
+        }
+      ]
+    }
+  }
+}
