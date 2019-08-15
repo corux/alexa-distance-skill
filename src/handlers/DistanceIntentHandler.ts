@@ -1,18 +1,17 @@
-import { HandlerInput } from "ask-sdk-core";
+import { BaseRequestHandler, IExtendedHandlerInput, Intents } from "@corux/ask-extensions";
 import { IntentRequest, Response } from "ask-sdk-model";
 import axios from "axios";
 import { URL } from "url";
-import { BaseIntentHandler, Intents } from "../utils";
 
 @Intents("DistanceIntent")
-export class DistanceIntentHandler extends BaseIntentHandler {
-  public async handle(handlerInput: HandlerInput): Promise<Response> {
-    const t = handlerInput.attributesManager.getRequestAttributes().t;
+export class DistanceIntentHandler extends BaseRequestHandler {
+  public async handle(handlerInput: IExtendedHandlerInput): Promise<Response> {
+    const t: any = handlerInput.t;
     const slots = (handlerInput.requestEnvelope.request as IntentRequest).intent.slots || {};
     const from = slots.from && slots.from.value;
     const to = slots.to && slots.to.value;
 
-    const error = (text: string) => handlerInput.responseBuilder
+    const error = (text: string) => handlerInput.getResponseBuilder()
       .speak(text)
       .reprompt(t("launch"))
       .getResponse();
@@ -28,7 +27,7 @@ export class DistanceIntentHandler extends BaseIntentHandler {
       return error(t("distance.calculation-error", from, to));
     }
 
-    return handlerInput.responseBuilder
+    return handlerInput.getResponseBuilder()
       .speak(t("distance.response", from, to, `<say-as interpret-as="unit">${data.distance}</say-as>`, data.duration))
       .withShouldEndSession(true)
       .getResponse();

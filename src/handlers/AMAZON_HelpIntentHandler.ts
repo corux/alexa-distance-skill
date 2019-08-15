@@ -1,13 +1,12 @@
-import { HandlerInput } from "ask-sdk-core";
+import { BaseRequestHandler, IExtendedHandlerInput, Intents } from "@corux/ask-extensions";
 import { Response } from "ask-sdk-model";
-import { BaseIntentHandler, Intents } from "../utils";
 
 @Intents("AMAZON.HelpIntent")
-export class AmazonHelpIntentHandler extends BaseIntentHandler {
-  public async handle(handlerInput: HandlerInput): Promise<Response> {
-    const t = handlerInput.attributesManager.getRequestAttributes().t;
+export class AmazonHelpIntentHandler extends BaseRequestHandler {
+  public async handle(handlerInput: IExtendedHandlerInput): Promise<Response> {
+    const t = handlerInput.t;
 
-    return handlerInput.responseBuilder
+    return handlerInput.getResponseBuilder()
       .speak(t("help"))
       .reprompt(t("launch"))
       .getResponse();

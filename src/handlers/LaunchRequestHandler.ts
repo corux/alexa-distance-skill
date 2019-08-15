@@ -1,13 +1,12 @@
-import { HandlerInput } from "ask-sdk-core";
+import { BaseRequestHandler, IExtendedHandlerInput, Request } from "@corux/ask-extensions";
 import { Response } from "ask-sdk-model";
-import { BaseIntentHandler, Request } from "../utils";
 
 @Request("LaunchRequest")
-export class LaunchRequestHandler extends BaseIntentHandler {
-  public async handle(handlerInput: HandlerInput): Promise<Response> {
-    const t = handlerInput.attributesManager.getRequestAttributes().t;
+export class LaunchRequestHandler extends BaseRequestHandler {
+  public async handle(handlerInput: IExtendedHandlerInput): Promise<Response> {
+    const t = handlerInput.t;
 
-    return handlerInput.responseBuilder
+    return handlerInput.getResponseBuilder()
       .speak(t("launch"))
       .reprompt(t("launch"))
       .getResponse();

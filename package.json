@@ -20,14 +20,13 @@
     "deploy:assets": "aws s3 sync ./assets s3://alexa-distance-skill/ --acl public-read"
   },
   "devDependencies": {
+    "@corux/ask-extensions": "1.0.0",
     "@types/jest": "24.0.17",
     "@types/node": "10.14.1",
     "ask-cli": "1.7.10",
     "ask-sdk-core": "2.7.0",
     "ask-sdk-model": "1.18.0",
     "axios": "0.19.0",
-    "i18next": "17.0.3",
-    "i18next-sprintf-postprocessor": "0.2.2",
     "jest": "24.8.0",
     "parcel-bundler": "1.12.3",
     "ts-jest": "24.0.2",
