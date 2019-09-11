@@ -24,11 +24,16 @@ export class DistanceIntentHandler extends BaseRequestHandler {
 
     const data = await this.calculateDistance(from, to);
     if (!data) {
-      return error(t("distance.calculation-error", from, to));
+      return error(t("distance.calculation-error", { from, to }));
     }
 
     return handlerInput.getResponseBuilder()
-      .speak(t("distance.response", from, to, `<say-as interpret-as="unit">${data.distance}</say-as>`, data.duration))
+      .speak(t("distance.response", {
+        distance: `<say-as interpret-as="unit">${data.distance}</say-as>`,
+        duration: data.duration,
+        from,
+        to,
+      }))
       .withShouldEndSession(true)
       .getResponse();
   }

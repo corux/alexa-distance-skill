@@ -3,8 +3,8 @@
   "distance": {
     "missing-input": "Bitte nenne zwei Städte.",
     "same-city": "Bitte nenne zwei unterschiedliche Städte.",
-    "calculation-error": "Ich konnte die Entfernung zwischen %s und %s nicht berechnen. Bitte nenne zwei andere Städte.",
-    "response": "Die Entfernung zwischen %s und %s beträgt %s. Mit dem Auto werden dazu %s benötigt."
+    "calculation-error": "Ich konnte die Entfernung zwischen {{from}} und {{to}} nicht berechnen. Bitte nenne zwei andere Städte.",
+    "response": "Die Entfernung zwischen {{from}} und {{to}} beträgt {{distance}}. Mit dem Auto werden dazu {{duration}} benötigt."
   },
   "stop": "Bis bald!",
   "help": "Du kannst nach der Entfernung zwischen zwei Städten fragen. Als Antwort wird die Entfernung und benötigte Zeit ausgegeben."
