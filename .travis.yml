@@ -1,3 +1,10 @@
 language: node_js
 node_js:
-  - "node"
+  - node
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: npm run deploy:prod
+  on: master
+
