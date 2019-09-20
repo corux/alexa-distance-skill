@@ -24,7 +24,7 @@
             "functionName": "alexa-distance-skill-production",
             "handler": "index.handler",
             "revisionId": "13a0d53b-e727-46f0-9458-7ef736c08258",
-            "runtime": "nodejs8.10"
+            "runtime": "nodejs10.x"
           }
         ]
       }
