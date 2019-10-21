@@ -73,6 +73,7 @@ describe("Distance Handler", () => {
       .send();
 
     expect(result.response.outputSpeech.ssml).toContain("Die Entfernung zwischen hamburg und berlin beträgt");
+    expect(result.response.outputSpeech.ssml).toContain(`<say-as interpret-as="unit">`);
     expect(result.response.shouldEndSession).toBe(true);
   });
 });

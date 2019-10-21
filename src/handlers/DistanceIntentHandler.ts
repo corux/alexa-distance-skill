@@ -32,6 +32,9 @@ export class DistanceIntentHandler extends BaseRequestHandler {
         distance: `<say-as interpret-as="unit">${data.distance}</say-as>`,
         duration: data.duration,
         from,
+        interpolation: {
+          escapeValue: false,
+        },
         to,
       }))
       .withShouldEndSession(true)
