@@ -8,6 +8,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: npm run deploy:prod
+  script: mkdir -p ~/.ask; echo '{"profiles":{}}' > ~/.ask/cli_config; npm run deploy:prod
   on: master
 
