@@ -29,7 +29,7 @@
     "@types/jest": "24.0.23",
     "@types/node": "10.14.1",
     "ask-sdk-core": "2.7.0",
-    "ask-sdk-model": "1.24.0",
+    "ask-sdk-model": "1.25.1",
     "axios": "0.19.0",
     "jest": "24.9.0",
     "parcel-bundler": "1.12.4",
@@ -38,7 +38,7 @@
     "ts-loader": "6.2.1",
     "ts-node": "8.5.4",
     "tslint": "5.20.1",
-    "typescript": "3.7.2",
+    "typescript": "3.7.3",
     "virtual-alexa": "0.7.3"
   }
 }
