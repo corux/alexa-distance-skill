@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - node
+  - 12
 
 before_deploy:
   - npm install -g ask-cli
@@ -10,4 +10,3 @@ deploy:
   skip_cleanup: true
   script: mkdir -p ~/.ask; echo '{"profiles":{}}' > ~/.ask/cli_config; npm run deploy:prod
   on: master
-
