@@ -35,7 +35,7 @@
     "parcel-bundler": "1.12.4",
     "parcel-plugin-static-files-copy": "2.3.1",
     "ts-jest": "25.4.0",
-    "ts-loader": "6.2.2",
+    "ts-loader": "7.0.0",
     "ts-node": "8.8.2",
     "tslint": "6.1.1",
     "typescript": "3.8.3",
